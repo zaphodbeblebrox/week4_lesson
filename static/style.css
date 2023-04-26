@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/* .boxes{
+    background-color: aqua;
+    border: 2px solid black;
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+} */
+.aqua{
+    background-color: aqua;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}

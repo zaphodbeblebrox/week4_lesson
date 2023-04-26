@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='/style.css')}}">
+</head>
+<body>
+    <h2 style="color: red">{{session.error}}</h2>
+    <h1>My First Form</h1>
+    <!-- <form action="https://www.google.com" method="GET"> -->
+        <form action="/process" method="GET"></form>
+        <div>
+            <label for="model_number">Name:</label>
+            <input type="number" name="model_number" id="">
+        </div>
+        <div>
+            <label for=""></label>
+            <select name="hobbies" id="hobbies">
+                <option>Training</option>
+                <option>Long flights through space</option>
+                <option>Chillin in the Hanger</option>
+                <option>Sword fights with the pals</option>
+            </select>
+        </div>
+        <input type="color" name="color" id="">
+        <button>Submit</button>
+    </form>
+</body>
+</html>
