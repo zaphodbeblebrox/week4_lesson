@@ -4,7 +4,8 @@ from flask_app import app
 @app.route("/")
 def index():
     session["logged_in"] = "yes"
-    return render_template("index.html")
+    # return render_template("index.html")
+    return render_template(url_for("index"))
 
 @app.route("/process", methods=["GET", "POST"])
 def process():
@@ -12,11 +13,6 @@ def process():
     session["model_number"] = request.form["model_number"]
     session["hobbies"] = request.form["hobbies"]
     session["color"] = request.form["color"]
-    # print(request.form["model_number"])
-    # print(request.form["hobbies"])
-    # print(request.form["color"])
-    # int(request.form["model_number"])
-    # return render_template("display.html", gundam=request.form)
     return redirect(url_for("display"))
 
 @app.route("/display")
